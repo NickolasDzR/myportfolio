@@ -1,0 +1,57 @@
+@media (max-width: 72rem) {}
+
+@media (max-width: 62rem) {
+    #clip-path {
+        display: none;
+    }
+}
+
+@media (max-width: 48rem) {
+    .main-header__section-left .img-profile {
+        margin-right: 0;
+    }
+
+    .main-header__about-me {
+        margin-top: rem(20);
+        transition: all .5s linear;
+    }
+
+    .main-header__section-right {
+        text-align: center;
+        margin-top: rem(20)
+    }
+
+    .main-header__section-left {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-header__about-me {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+    .img-position {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 36rem) {
+    .main-content .all-project .project-item {
+        border-bottom: 0.0625rem solid #e8e8e8;
+    }
+
+    .main-content .all-project .project-item .text-project {
+        padding: r(10) 0;
+    }
+
+    .main-content .all-project {
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 20rem) {}
+
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+
+}

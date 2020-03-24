@@ -1,0 +1,105 @@
+.main-header {
+    background-color: $header;
+    margin-bottom: rem(20);
+    padding: rem(25) 0;
+    position: relative;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.25);
+
+    &__wrapper {
+        @include row-flex();
+        @include md(justify-content, center);
+    }
+
+    &__section-left {
+
+        @include col();
+        @include size-md(12);
+        @include size(8);
+        display: flex;
+        align-items: center;
+
+        .img-profile {
+            width: rem(145);
+            height: rem(150);
+            border-radius: 50%;
+            margin-right: rem(30);
+        }
+
+        svg {
+            width: rem(20);
+            height: rem(20);
+        }
+
+        &_z-index_10 {
+            z-index: 10;
+        }
+    }
+
+    &__about-me {
+        ul {
+            margin-top: rem(10);
+
+            li {
+                list-style: none;
+                display: inline-block;
+                margin-right: rem(15);
+            }
+        }
+
+        a {
+            padding: rem(10);
+            background-color: $btn-color;
+            border-radius: 50%;
+            display: inline-flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
+
+    &__section-right {
+
+        @include col();
+        @include size-md(12);
+        @include size(4);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        .click-icon {
+            &:before {
+                content: url('../img/sprites/sprite.svg#forward');
+                display: inline-block;
+                width: rem(15);
+                height: rem(15);
+                position: relative;
+                top: rem(3);
+                left: rem(-5);
+            }
+        }
+
+        &_z-index_10 {
+            z-index: 10;
+        }
+    }
+}
+
+#css,
+#html,
+#javascript {
+    fill: #c5ccce;
+}
+
+#clip-path {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 41.5rem;
+    height: 12.5rem;
+
+    svg {
+        width: 100%;
+        height: 100%;
+        fill: #d2daa3;
+    }
+}

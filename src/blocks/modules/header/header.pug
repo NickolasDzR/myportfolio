@@ -1,0 +1,38 @@
+mixin header()
+    header.main-header.wow.rotateInDownLeft(data-wow-duration="0.7s")
+        //- .main-header__clip-path.wow.fadeInRight(data-wow-delay="1.3s" data-wow-duration="2.5s")
+        div#clip-path.wow.fadeInRight(data-wow-delay="1.3s" data-wow-duration="2.5s")
+            svg(viewBox="0 0 660 200" xmlns="http://www.w3.org/2000/svg")
+                path(d="M333 -22H660V200H0L333 -22Z")
+        .container
+            .main-header__wrapper
+                .main-header__section-left.main-header__section-left_z-index_10
+                    picture.wow.fadeInLeft(data-wow-delay="0.5s")
+                        source(srcset="img/profile.webp")
+                        img.img-profile.img-responsive(src="img/profile.jpg", alt="Николай Ерашов")
+                    .main-header__about-me
+                        h2.heading__h2.heading-name.wow.fadeInDown(data-wow-delay="1.2s")
+                            | Николай Ерашов
+                        p.wow.fadeInDown(data-wow-delay="1s")
+                            | Frontend разработчик
+                        ul
+                            li.wow.fadeInDown(data-wow-delay="0.6s")
+                                a(href="https://github.com/NickolasDzR")
+                                    svg
+                                        use(xlink:href="#cat")
+                            li.wow.fadeInDown(data-wow-delay="0.7s")
+                                a(href="https://vk.com/id499999088")
+                                    svg
+                                        use(xlink:href="#vk")
+                            li.wow.fadeInDown(data-wow-delay="0.8s")
+                                a(href="https://t.me/nickolas69")
+                                    svg
+                                        use(xlink:href="#telegram")
+                            li.wow.fadeInDown(data-wow-delay="0.9s")
+                                a(href="viber://pa?chatURI=79991285982")
+                                    svg
+                                        use(xlink:href="#viber")
+                .main-header__section-right.main-header__section-right_z-index_10
+                    button#open-modal.btn.wow.fadeInRight(data-wow-delay="1.3s")
+                        i.click-icon
+                            | Написать мне

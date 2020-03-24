@@ -1,0 +1,146 @@
+mixin main()
+    main.main-content
+        .paralax
+            svg#css-label
+                use(xlink:href="#css")
+            svg#html-label
+                use(xlink:href="#html")
+            svg#js-label
+                use(xlink:href="#javascript")
+        .container
+            .main-content__wrapper
+                section.main-content__section-left
+                    article.main-content__content-b.wow.fadeInLeft(data-wow-delay="0.5s")
+                        h2.heading__h2.main-heading
+                            |   Обо мне
+                        p
+                            |   Меня зовут Николай, мне 25 лет и я из Дзержинска( Нижегородская область ). Занимаюсь версткой сайтов и специализируюсь на HTML, CSS, Javascript, Bootstrap, Gulp, Pug, Scss, БЭМ, Git
+                        p
+                            |   На данный момент я учусь на frontend разработчика. До этого выучился на html верстальщика, пройдя курс "Профессиональный html и CSS" на htmlacademy.ru.
+                        p
+                            |   Очень люблю читать, для этого учу английский, уже во всю пытаюсь разговаривать(акцент оставляет желать лучшего, но я совершенствую его с каждым днем, у меня есть друзья носители английского языка :)) Так же, пытаюсь читать книги, пока художественные(ведь для этого я его и учил), правда с редкой помощью словаря.
+                        p
+                            |   Увлекаюсь спортом, но не фанатично, с 16 лет занимаюсь в тренажерном зале, люблю бег, зимние виды спорта, плавание и много чего еще :).
+                        p
+                            |   Сейчас я нахожусь в поиске работы в области фронтенда, мечтаю в совершенстве знать английский язык
+                        p
+                            |   Постоянно занимаюсь самообразованием в интересующем меня направлении, люблю филосовствовать и заводить новые знакомства, потому что я очень общительный.
+                    .main-content__content-b.wow.fadeInLeft(data-wow-delay="0.5s")
+                        .main-project
+                            h2.heading__h2
+                                |   Последние работы
+                            h5.heading__h5.t-center
+                                |   Транспортная компания - ООО "Мейстер"<br>
+                                |   Адаптивный, кроссбраузерный сайт выполненный с помощью Bootstrap
+                            picture
+                                source(srcset="img/meister.webp")
+                                img.img-responsive(src="img/meister.png", alt="ООО 'Мейстер'", data-url="meister")
+                            p.paragraph__description
+                                |   Данный проект был выполнен для транспортной компании ООО "Мейстер". Выполнен с поддержкой последних стандартов HTML, CSS, Javascript, с использованием Bootstrap, SCSS, GULP
+                            .link-wrp.t-center
+                                a.btn
+                                    |   Посмотреть проект
+                        .all-project
+                            .smitller.project-item
+                                .img-project
+                                    a(href="")
+                                        img.img-responsive(src="http://placehold.it/150")
+                                .text-project
+                                    p
+                                        |   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, voluptatibus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, voluptatibus.
+                                    a(href="")
+                                        |   Посмотреть сайт
+                            .smitller.project-item
+                                .img-project
+                                    a(href="")
+                                        img.img-responsive(src="http://placehold.it/150")
+                                .text-project
+                                    p
+                                        |   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, voluptatibus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, voluptatibus.
+                                    a(href="")
+                                        |   Посмотреть сайт
+                            .smitller.project-item
+                                .img-project
+                                    a(href="")
+                                        img.img-responsive(src="http://placehold.it/150")
+                                .text-project
+                                    p
+                                        |   Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, voluptatibus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, voluptatibus.
+                                    a(href="")
+                                        |   Посмотреть сайт
+                    .main-content__content-b.wow.fadeInLeft(data-wow-delay="0.5s")
+                        .main-project
+                            h2.heading__h2
+                                |   Javascript проекты
+                            h5.heading__h5.t-center
+                                |   Проект "Игры разума"<br>
+                            a(href='https://asciinema.org/a/HeF980QdX93R28ImT1WvotEwu', target='_blank')
+                                img(src='https://asciinema.org/a/HeF980QdX93R28ImT1WvotEwu.svg')
+                            p.paragraph__description
+                                |   Проект выполнен в рамках обучения на профессию Frontend developer. "Игры разума" - это набор мини-игр, запускаемых из консоли
+                            p.paragraph__description
+                                |   Данный проект включает в себя 5 математических игр, в каждой из которой Вам предстоит ответить на 3 вопроса.
+                section.main-content__section-right
+                    aside.main-content__aside-wrp.wow.fadeInRight(data-wow-delay="0.5s")
+                        ul
+                            li
+                                |   Н.Новгород, Россия
+                            li
+                                a(href="mailto:nikolyae2019@gmail.com")
+                                    |   nikolyae2019@gmail.com
+                            li
+                                a(href="tel:+79991205982")
+                                    |   +7 (999) 120 59 82
+                    aside.main-content__aside-wrp.main-content__observer_item-1.wow.fadeInRight(data-wow-delay="0.5s")
+                        h2.heading__h2
+                            |   Мои навыки
+                        p
+                            |   HTML5, CSS3
+                        .progress-bar
+                            .progress-bar__level(data-level="89")
+                        p
+                            |   Bootstrap, SCSS
+                        .progress-bar
+                            .progress-bar__level(data-level="89")
+                        p
+                            |   Gulp, Pug
+                        .progress-bar
+                            .progress-bar__level(data-level="89")
+                        p
+                            |   Javascript
+                        .progress-bar
+                            .progress-bar__level(data-level="60")
+                    aside.main-content__aside-wrp.wow.fadeInRight(data-wow-delay="0.5s")
+                        h2.heading__h2
+                                |   Мой github
+                        #gha_widget
+                    aside.main-content__aside-wrp.main-content__observer_item-2.wow.fadeInRight(data-wow-delay="0.5s")
+                        h2.heading__h2
+                            |   Знание языков
+                        div.language-wrp
+                            p
+                                |   Русский
+                            p
+                                |   Носитель
+                        .progress-bar
+                            .progress-bar__level.progress-bar__level-lang(data-level="100")
+                        div.language-wrp
+                            p
+                                |   Английский
+                            p
+                                |   B2
+                        .progress-bar
+                            .progress-bar__level.progress-bar__level-lang(data-level="60")
+                    aside.main-content__aside-wrp.main-content_courses.wow.fadeInRight(data-wow-delay="0.5s")
+                        h2.heading__h2
+                            |   Курсы
+                        ul
+                            li
+                                p
+                                    |   Профессиональный HTML и CSS
+                                span
+                                    |   htmlacademy.ru (08.2018 - 09.2018)
+                                picture
+                                    source(srcset="img/sertificate.webp")
+                                img.img-responsive#sertificate(src="img/sertificate.png", alt="Проект 'Игры разума'")
+                    
