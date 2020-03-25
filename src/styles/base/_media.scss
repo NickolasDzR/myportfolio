@@ -31,6 +31,7 @@
         flex: 0 0 100%;
         text-align: center;
     }
+
     .img-position {
         width: 90vw;
     }
@@ -48,10 +49,53 @@
     .main-content .all-project {
         padding-top: 0;
     }
+    #modal__inner {
+        margin: r(10);
+    }
 }
 
-@media (max-width: 20rem) {}
+@media (max-width: 20rem) {
+    #modal__information p {
+        font-size: 17px;
+    }
 
-@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #modal__information span {
+        font-size: 14px;
+    }
 
+    #modal__form form {
+        padding: 1.275rem;
+    }
+
+    #modal__form form label {
+        margin-bottom: 0.95rem;
+    }
+
+    #modal__form form textarea {
+        width: 100%;
+        height: r(75);
+    }
+
+    #modal__form #btn-modal {
+        margin: 1.175rem auto 0;
+    }
+
+    #modal__close {
+        top: 0.75rem;
+        right: 0.6rem;
+    }
+
+    .paragraph {
+        font-size: 15.7px;
+        line-height: 1.5;
+    }
+
+    .main-content__content-b,
+    .main-content__aside-wrp {
+        padding: 1.4875rem;
+        margin-bottom: 1.2875rem;
+    }
 }
+
+@media (-ms-high-contrast: none),
+(-ms-high-contrast: active) {}

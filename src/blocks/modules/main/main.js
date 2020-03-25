@@ -6,6 +6,7 @@ import Mustache from 'mustache';
 import simpleParallax from 'simple-parallax-js';
 import Swal from 'sweetalert2'
 import assert from 'assert';
+import tippy from 'tippy.js';
 
 var GitHubActivity = (function () {
 	'use strict';
@@ -715,6 +716,10 @@ document.addEventListener('input', (e) => {
 	}
 })
 
+const regExEmail = new RegExp(/^[a-zA-Z\d\\.\-]+\@[a-zA-Z\d\\.\-]+\.[a-zA-Z]+$/);
+const regExName = new RegExp(/^[а-яА-Яa-zA-Z]+$/);
+
+
 document.addEventListener('click', (e) => {
 	const modal = document.getElementById('modal');
 	const modalInner = document.getElementById('modal__inner');
@@ -724,18 +729,44 @@ document.addEventListener('click', (e) => {
 	if (e.target.id === "btn-modal") {
 		const inputName = document.getElementById('input-name');
 		const inputEmail = document.getElementById('input-email');
-		if (inputName.value.length < 2 || inputEmail.value < 4) {
-			if (inputName.value.length < 2) {
-				inputName.parentElement.classList.add('input-error-style', "animated", 'shake');
-				setTimeout(() => {
-					inputName.parentElement.classList.remove("animated", 'shake');
-				}, 1200);
+		if (regExName.test(inputName.value) === false || regExEmail.test(inputEmail.value) === false) {
+			if (regExName.test(inputName.value) === false) {
+				inputName.parentElement.classList.add('input-error-style');
+				tippy('#input-name', {
+					showOnCreate: true,
+					trigger: 'manual',
+					content: "Только латинские буквы!",
+					placement: 'top-start',
+					delay: [100, 100],
+					duration: 1000,
+					arrow: true,
+					onShow(instance) {
+						const tooltip = instance.popper.firstElementChild;
+						requestAnimationFrame(() => {
+							tooltip.classList.add('animated');
+							tooltip.classList.add('shake');
+						});
+					},
+				});
 			}
-			if (inputEmail.value.length < 4) {
-				inputEmail.parentElement.classList.add('input-error-style', "animated", 'shake');
-				setTimeout(() => {
-					inputEmail.parentElement.classList.remove("animated", 'shake');
-				}, 1200);
+			if (regExEmail.test(inputEmail.value) === false) {
+				inputEmail.parentElement.classList.add('input-error-style');
+				tippy('#input-email', {
+					showOnCreate: true,
+					trigger: 'manual',
+					content: "почта вида your@email.ru!",
+					placement: 'top-start',
+					delay: [100, 100],
+					duration: 1000,
+					arrow: true,
+					onShow(instance) {
+						const tooltip = instance.popper.firstElementChild;
+						requestAnimationFrame(() => {
+							tooltip.classList.add('animated');
+							tooltip.classList.add('shake');
+						});
+					},
+				});
 			}
 			e.preventDefault();
 			return;
@@ -769,8 +800,7 @@ new simpleParallax(jsLabel, {
 	overflow: true,
 });
 
-const calc = (num) => {
-	return num * 2;
-}
-
-assert.deepEqual(calc(2), 3)
+// tippy('#myButton', {
+// 	content: "I'm a Tippy tooltip!",
+// 	trigger: 'click'
+// });

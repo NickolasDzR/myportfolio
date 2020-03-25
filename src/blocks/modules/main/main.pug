@@ -13,17 +13,12 @@ mixin main()
                     article.main-content__content-b.wow.fadeInLeft(data-wow-delay="0.5s")
                         h2.heading__h2.main-heading
                             |   Обо мне
-                        p
+                        p.paragraph
                             |   Меня зовут Николай, мне 25 лет и я из Дзержинска( Нижегородская область ). Занимаюсь версткой сайтов и специализируюсь на HTML, CSS, Javascript, Bootstrap, Gulp, Pug, Scss, БЭМ, Git
-                        p
                             |   На данный момент я учусь на frontend разработчика. До этого выучился на html верстальщика, пройдя курс "Профессиональный html и CSS" на htmlacademy.ru.
-                        p
                             |   Очень люблю читать, для этого учу английский, уже во всю пытаюсь разговаривать(акцент оставляет желать лучшего, но я совершенствую его с каждым днем, у меня есть друзья носители английского языка :)) Так же, пытаюсь читать книги, пока художественные(ведь для этого я его и учил), правда с редкой помощью словаря.
-                        p
                             |   Увлекаюсь спортом, но не фанатично, с 16 лет занимаюсь в тренажерном зале, люблю бег, зимние виды спорта, плавание и много чего еще :).
-                        p
                             |   Сейчас я нахожусь в поиске работы в области фронтенда, мечтаю в совершенстве знать английский язык
-                        p
                             |   Постоянно занимаюсь самообразованием в интересующем меня направлении, люблю филосовствовать и заводить новые знакомства, потому что я очень общительный.
                     .main-content__content-b.wow.fadeInLeft(data-wow-delay="0.5s")
                         .main-project
@@ -33,7 +28,7 @@ mixin main()
                                 |   Транспортная компания - ООО "Мейстер"<br>
                                 |   Адаптивный, кроссбраузерный сайт выполненный с помощью Bootstrap
                             picture
-                                source(srcset="img/meister.webp")
+                                source(srcset="img/meister.webp" type="image/webp")
                                 img.img-responsive(src="img/meister.png", alt="ООО 'Мейстер'", data-url="meister")
                             p.paragraph__description
                                 |   Данный проект был выполнен для транспортной компании ООО "Мейстер". Выполнен с поддержкой последних стандартов HTML, CSS, Javascript, с использованием Bootstrap, SCSS, GULP
@@ -86,7 +81,7 @@ mixin main()
                             li
                                 |   Н.Новгород, Россия
                             li
-                                a(href="mailto:nikolyae2019@gmail.com")
+                                a#myButton(href="mailto:nikolyae2019@gmail.com")
                                     |   nikolyae2019@gmail.com
                             li
                                 a(href="tel:+79991205982")
@@ -141,6 +136,6 @@ mixin main()
                                 span
                                     |   htmlacademy.ru (08.2018 - 09.2018)
                                 picture
-                                    source(srcset="img/sertificate.webp")
+                                    source(srcset="img/sertificate.webp" type="image/webp")
                                 img.img-responsive#sertificate(src="img/sertificate.png", alt="Проект 'Игры разума'")
                     
