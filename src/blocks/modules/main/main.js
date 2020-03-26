@@ -1,11 +1,9 @@
-require('classlist-polyfill');
-require('intersection-observer');
 require('element-remove');
-require('../../../../node_modules/promise-polyfill/src/polyfill');
+require('intersection-observer');
+import 'core-js';
 import Mustache from 'mustache';
 import simpleParallax from 'simple-parallax-js';
 import Swal from 'sweetalert2'
-import assert from 'assert';
 import tippy from 'tippy.js';
 
 var GitHubActivity = (function () {
@@ -680,7 +678,7 @@ portfolioProjectBlock.addEventListener('click', e => {
 			const img = document.getElementById('lightboxImg');
 			img.src = e.target.src;
 			const projectLink = document.getElementById('project-link');
-			projectLink.href = `${'http//www.wholesom.ru/projects/'}${e.target.dataset.url}/index.html`
+			projectLink.href = `${'http://nick-erashov.ru/projects/'}${e.target.dataset.url}/index.html`
 		};
 	};
 });
@@ -699,7 +697,7 @@ modalBtn.addEventListener('click', () => {
 	if (document.getElementById('modal') === null) {
 		const modalWindow = document.createElement('div');
 		modalWindow.id = 'modal';
-		modalWindow.innerHTML = '<div id="blur-modal"></div><div id="modal__inner"><div id="modal__information"><p>Отправьте мне сообщение</p><span>Хотя бы ваше имя и почту</span><button id="modal__close"></button></div><div id="modal__form"><form action=""><label class="input-label" for="input-name" data-error="Забыли оставить имя"><input id="input-name" type="text" placeholder="Ваше Имя"></label><label class="input-label" for="input-email" data-error="Забыли оставить почту"><input id="input-email" type="text" placeholder="Ваш email"></label><label for="input-number"><input id="input-number" type="text" placeholder="Ваш номер"></label><textarea name="", rows="5", style="resize: none", placeholder="Текст"></textarea><button class="btn" id="btn-modal">Отправить</btn></form></div></div>';
+		modalWindow.innerHTML = '<div id="blur-modal"></div><div id="modal__inner"><div id="modal__information"><p>Отправьте мне сообщение</p><span>Хотя бы ваше имя и почту</span><button id="modal__close"></button></div><div id="modal__form"><form class="contact-form" action="POST"><label class="input-label" for="input-name" data-error="Забыли оставить имя"><input id="input-name" type="text" placeholder="Ваше Имя"></label><label class="input-label" for="input-email" data-error="Забыли оставить почту"><input id="input-email" type="text" placeholder="Ваш email"></label><label for="input-number"><input id="input-number" type="text" placeholder="Ваш номер"></label><textarea name="", rows="5", style="resize: none", placeholder="Текст"></textarea><button class="btn" id="btn-modal">Отправить</btn></form></div></div>';
 		document.body.appendChild(modalWindow);
 	}
 })
@@ -800,7 +798,12 @@ new simpleParallax(jsLabel, {
 	overflow: true,
 });
 
-// tippy('#myButton', {
-// 	content: "I'm a Tippy tooltip!",
-// 	trigger: 'click'
-// });
+
+const btnModal = document.querySelector('#btn-modal');
+
+document.addEventListener('click', function(e) {
+	console.log(e.target.id)
+	if (e.target.id === 'btn-modal') {
+		console.log('asdasdasd');
+	}
+})

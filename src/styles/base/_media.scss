@@ -1,8 +1,16 @@
-@media (max-width: 72rem) {}
+@media (max-width: 75rem) {
+    .main-content .all-project .project-item .text-project {
+        margin-top: 0.7rem;
+    }
+}
 
 @media (max-width: 62rem) {
     #clip-path {
         display: none;
+    }
+
+    .main-content .all-project .project-item .text-project {
+        margin-top: r(-6);
     }
 }
 
@@ -35,9 +43,25 @@
     .img-position {
         width: 90vw;
     }
+
+    .main-content .all-project {
+        padding-top: 1.5rem;
+    }
+
+    .main-content .all-project .project-item .img-project {
+        margin-bottom: r(10);
+    }
+
+    .main-content .all-project .project-item .text-project {
+        margin-top: r(3);
+    }
 }
 
 @media (max-width: 36rem) {
+    .img-responsive {
+        min-height: r(130);
+    }
+
     .main-content .all-project .project-item {
         border-bottom: 0.0625rem solid #e8e8e8;
     }
@@ -49,18 +73,36 @@
     .main-content .all-project {
         padding-top: 0;
     }
+
     #modal__inner {
         margin: r(10);
+    }
+
+    .main-content .all-project .project-item .img-project {
+        margin-bottom: 0.025rem;
+    }
+
+    .main-content__content-b,
+    .main-content__aside-wrp {
+        padding: 1.6875rem;
     }
 }
 
 @media (max-width: 20rem) {
+    .main-content .main-content_courses p {
+        font-size: 0.8375rem;
+    }
+
+    .main-content .main-content_courses span {
+        font-size: 0.9rem;
+    }
+
     #modal__information p {
-        font-size: 17px;
+        font-size: r(17);
     }
 
     #modal__information span {
-        font-size: 14px;
+        font-size: r(14);
     }
 
     #modal__form form {
@@ -86,7 +128,7 @@
     }
 
     .paragraph {
-        font-size: 15.7px;
+        font-size: r(15.7);
         line-height: 1.5;
     }
 

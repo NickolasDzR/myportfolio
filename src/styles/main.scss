@@ -8,8 +8,12 @@
 @import "../blocks/modules/modules";
 @import "base/media";
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-size: 16px;
+    font-size: 16r(10);
     margin: 0 auto;
     position: relative;
     line-height: 1.75;
@@ -52,7 +56,7 @@ img {
 .btn {
     color: white;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: r(14);
     background-color: #9AA4A2;
     padding: rem(9) rem(25) rem(10);
     border: none;
@@ -71,7 +75,7 @@ img {
 .heading__h3,
 .heading__h4,
 .heading__h5 {
-    margin-bottom: rem(20);
+    margin-bottom: 0.75rem;
     color: #7b7878;
 }
 
@@ -93,7 +97,7 @@ img {
 }
 
 .heading__h5 {
-    line-height: 20px;
+    line-height: r(20);
 }
 
 #modal {
@@ -111,23 +115,23 @@ img {
     &__inner {
         background-color: rgba(255, 255, 255, 1);
         width: rem(500);
-        border-radius: 10px;
+        border-radius: r(10);
         animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         z-index: 20;
     }
 
     &__information {
-        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        border-bottom: r(1) solid rgba(0, 0, 0, .2);
         background-color: rgba(0, 0, 0, .1);
         padding: rem(20) rem(20) rem(10);
 
         p {
-            font-size: 20px;
+            font-size: r(20);
             font-weight: bold;
         }
 
         span {
-            font-size: 16px;
+            font-size: 16r(10);
         }
     }
 
@@ -145,12 +149,12 @@ img {
         &:before,
         &:after {
             content: '';
-            width: 15px;
-            height: 1px;
+            width: 15r(10);
+            height: 1r(10);
             background-color: #4c4747;
             display: inline-block;
             position: absolute;
-            left: 3px;
+            left: 3r(10);
         }
 
         &:before {
@@ -177,7 +181,7 @@ img {
             padding: r(5);
             border-radius: r(4);
             box-shadow: none;
-            border: 0.063rem solid #aba8a8;
+            border: 0.0625rem solid #aba8a8;
             outline: none;
         }
 
@@ -251,7 +255,7 @@ img {
     }
 
     100% {
-        background-position: 500px;
+        background-position: r(500);
     }
 }
 
@@ -309,9 +313,9 @@ img {
 @keyframes fadeInLeft {
     0% {
         opacity: 0;
-        -webkit-transform: translateX(-20px);
-        -ms-transform: translateX(-20px);
-        transform: translateX(-20px);
+        -webkit-transform: translateX(r(-20));
+        -ms-transform: translateX(r(-20));
+        transform: translateX(r(-20));
     }
 
     100% {
@@ -330,9 +334,9 @@ img {
 @keyframes fadeInDown {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-20px);
-        -ms-transform: translateY(-20px);
-        transform: translateY(-20px);
+        -webkit-transform: translateY(r(-20));
+        -ms-transform: translateY(r(-20));
+        transform: translateY(r(-20));
     }
 
     100% {
@@ -351,9 +355,9 @@ img {
 @keyframes fadeInRight {
     0% {
         opacity: 0;
-        -webkit-transform: translateX(20px);
-        -ms-transform: translateX(20px);
-        transform: translateX(20px);
+        -webkit-transform: translateX(r(20));
+        -ms-transform: translateX(r(20));
+        transform: translateX(r(20));
     }
 
     100% {
@@ -370,7 +374,7 @@ img {
 }
 
 .gha-header {
-    width: calc(100% - r(2));
+    width: calc(100% - 0.125rem);
 }
 
 .gha-gravatar {
@@ -387,29 +391,33 @@ img {
     margin-left: auto;
 }
 
+.gha-gravatar-commit {
+    display: inline-block;
+}
+
 .octicons-custom {
     margin: 0;
     padding: 0;
     font-size: inherit;
 
     &>svg {
-        width: 40px;
-        height: 40px;
+        width: r(40);
+        height: r(40);
     }
 }
 
 .modal__inner_blur {
-    filter: blur(5px);
+    filter: blur(r(5));
     animation: modalBlur .7s linear !important;
 }
 
 @keyframes modalBlur {
     0% {
-        filter: blur(0px)
+        filter: blur(0)
     }
 
     100% {
-        filter: blur(5px)
+        filter: blur(r(5))
     }
 }
 
@@ -424,9 +432,9 @@ img {
 @keyframes slideInDown {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(-2000px);
-        -ms-transform: translateY(-2000px);
-        transform: translateY(-2000px);
+        -webkit-transform: translateY(r(-2000));
+        -ms-transform: translateY(r(-2000));
+        transform: translateY(r(-2000));
     }
 
     100% {
@@ -445,9 +453,9 @@ img {
 @keyframes slideInUp {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(2000px);
-        -ms-transform: translateY(2000px);
-        transform: translateY(2000px);
+        -webkit-transform: translateY(r(-2000));
+        -ms-transform: translateY(r(-2000));
+        transform: translateY(r(-2000));
     }
 
     100% {
@@ -464,37 +472,11 @@ img {
 
 .input-error-style input {
     padding: r(4) !important;
-    border: 2px solid rgba(237, 17, 46, 0.5);
-    box-shadow: 0px 0px 10px 0px rgba(237, 17, 46, 1);
+    border: r(2) solid rgba(237, 17, 46, 0.5);
+    box-shadow: 0 0 r(10) 0 rgba(237, 17, 46, 1);
     animation: errorBoxShadow 1s ease infinite;
     position: relative;
 }
-
-// .input-error-style:after {
-//     content: attr(data-error);
-//     position: absolute;
-//     top: -29px;
-//     left: 0;
-//     color: #fff;
-//     background-color: rgba(0, 0, 0, 0.9);
-//     border-radius: 12px;
-//     padding: 0px 10px;
-//     // transform: translate(0px, 0px);
-//     opacity: 1;
-//     z-index: 51;
-//     animation: errorMessage .7s ease-out;
-// }
-
-// .input-error-style:before {
-//     content: url(../img/sprites/sprite.svg#triangle);
-//     display: inline-block;
-//     width: rem(30);
-//     height: auto;
-//     z-index: 50;
-//     position: absolute;
-//     top: -1rem;
-//     left: 5rem;
-// }
 
 @keyframes shake {
 
@@ -510,18 +492,18 @@ img {
     50%,
     70%,
     90% {
-        -webkit-transform: translateX(-10px);
-        -ms-transform: translateX(-10px);
-        transform: translateX(-10px);
+        -webkit-transform: translateX(r(-10));
+        -ms-transform: translateX(r(-10));
+        transform: translateX(r(-10));
     }
 
     20%,
     40%,
     60%,
     80% {
-        -webkit-transform: translateX(10px);
-        -ms-transform: translateX(10px);
-        transform: translateX(10px);
+        -webkit-transform: translateX(r(10));
+        -ms-transform: translateX(r(10));
+        transform: translateX(r(10));
     }
 }
 
@@ -532,14 +514,18 @@ img {
 
 @keyframes errorBoxShadow {
     0% {
-        border: 2px solid rgba(237, 17, 46, 1);
+        border: r(2) solid rgba(237, 17, 46, 1);
     }
 
     50% {
-        border: 2px solid rgba(237, 17, 46, 0.5);
+        border: r(2) solid rgba(237, 17, 46, 0.5);
     }
 
     100% {
-        border: 2px solid rgba(237, 17, 46, 1);
+        border: r(2) solid rgba(237, 17, 46, 1);
     }
+}
+
+.img-shadow {
+    box-shadow: r(1) r(1) r(3) 0 #000000;
 }

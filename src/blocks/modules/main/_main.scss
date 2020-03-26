@@ -17,7 +17,7 @@
 
         &>div,
         &>article {
-            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0 r(5) 0 rgba(0, 0, 0, 0.25);
         }
 
         @include col();
@@ -44,39 +44,49 @@
     .all-project {
         border-top: rem(1) solid $light-gray;
         margin-top: rem(40);
-        padding-top: rem(40);
+        padding-top: 0.7rem;
+        display: flex;
 
         .project-item {
             @include row-flex();
-            margin: rem(20) 0;
+            margin: 2.0rem 0 1.25rem;
 
             .img-project {
                 @include col();
-                @include size(3);
-                @include size-md(12);
+                @include size(12);
+                // @include size-md(12);
+                // @include size-lg(4);
+                // @include size-xl(12);
+            }
+            .name-project {
+                margin: 0 0 0 r(15);
             }
 
-            .text-project {
-                @include col();
-                @include size(9);
-                @include size-md(12);
-                display: inline-flex;
-                flex-direction: column;
-                justify-content: center;
+            // .text-project {
+                // @include col();
+                // @include size(8);
+                // @include size-md(12);
+                // @include size-lg(8);
+                // @include size-xl(12);
+                // display: inline-flex;
+                // flex-direction: column;
+                // justify-content: center;
+                // margin-top: r(-6);
+                // line-height: 1.5;
 
-                a {
-                    font-size: rem(14)
-                }
+                // a {
+                //     font-size: rem(14)
+                // }
 
-                a:before {
-                    content: url('../img/sprites/sprite.svg#chain');
-                    display: inline-block;
-                    width: rem(14);
-                    height: rem(14);
-                    position: relative;
-                    top: 2px;
-                }
-            }
+                // a:before {
+                //     content: url('../img/sprites/sprite.svg#chain');
+                //     display: inline-block;
+                //     width: rem(14);
+                //     height: rem(14);
+                //     position: relative;
+                //     top: r(2);
+                // }
+            // }
         }
     }
 
@@ -85,7 +95,7 @@
         &>div,
         &>article,
         &>aside {
-            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0 r(5) 0 rgba(0, 0, 0, 0.25);
         }
 
         @include col();
@@ -177,7 +187,7 @@
 }
 
 .gha-activity {
-    padding: 10px;
+    padding: r(10);
 }
 
 .gha-feed {
@@ -186,7 +196,7 @@
 
 .gha-activity:last-child {
     padding: 10;
-    padding-bottom: 10px;
+    padding-bottom: r(10);
 }
 
 .gha-header {
@@ -219,8 +229,8 @@
 
 .img-position {
     width: 70vw;
-    border: 1px solid black;
-    padding: 2px;
+    border: r(1) solid black;
+    padding: r(2);
     background-color: rgba(0, 0, 0, .6);
     z-index: 1000;
 }
@@ -229,8 +239,8 @@
     position: absolute;
     top: 3%;
     right: 2%;
-    width: 17px;
-    height: 17px;
+    width: r(17);
+    height: r(17);
     background-color: transparent;
     z-index: 100000;
     cursor: pointer;
@@ -242,12 +252,12 @@
 .closeButton:after {
     content: "";
     display: inline-block;
-    width: 14px;
-    height: 1px;
-    background-color: rgb(36, 34, 34);
+    width: r(14);
+    height: r(1);
+    background-color: #66cb8c;
     position: absolute;
-    top: 8px;
-    left: 2px;
+    top: r(8);
+    left: r(2);
 }
 
 .closeButton:before {
@@ -262,7 +272,7 @@
 
 .closeButton:hover:before,
 .closeButton:hover:after {
-    background-color: #635f63;
+    background-color: #66cb8c;
     transition: all .5s linear;
 }
 
@@ -301,7 +311,7 @@
 }
 
 #project-link:hover {
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 r(12) r(16) 0 rgba(0, 0, 0, 0.24), 0 r(17) r(50) 0 rgba(0, 0, 0, 0.19);
     transition: all .5s linear;
 }
 
@@ -322,8 +332,8 @@
     }
 
     100% {
-        -webkit-transform: translateY(-700px);
-        transform: translateY(-700px);
+        -webkit-transform: translateY(r(-700));
+        transform: translateY(r(-700));
     }
 }
 
