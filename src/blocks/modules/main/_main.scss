@@ -49,17 +49,20 @@
 
         .project-item {
             @include row-flex();
+            justify-content: center;
             margin: 2.0rem 0 1.25rem;
 
             .img-project {
                 @include col();
                 @include size(12);
+                @include row-ib();
                 // @include size-md(12);
                 // @include size-lg(4);
                 // @include size-xl(12);
             }
             .name-project {
-                margin: 0 0 0 r(15);
+                margin: 0 0 0 rem(15);
+                width: 100%;
             }
 
             // .text-project {

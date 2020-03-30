@@ -10,7 +10,7 @@
     }
 
     .main-content .all-project .project-item .text-project {
-        margin-top: r(-6);
+        margin-top: rem(-6);
     }
 }
 
@@ -46,28 +46,45 @@
 
     .main-content .all-project {
         padding-top: 1.5rem;
+        flex-wrap: wrap;
     }
 
     .main-content .all-project .project-item .img-project {
-        margin-bottom: r(10);
+        margin-bottom: rem(10);
+        width: 100%;
     }
 
     .main-content .all-project .project-item .text-project {
-        margin-top: r(3);
+        margin-top: rem(3);
+    }
+
+    .main-content .all-project .project-item {
+        border-bottom: rem(1) solid $light-gray;
+        padding-bottom: 2rem;
+        width: 100%;
+    }
+
+    .main-content .all-project .project-item .name-project:after {
+        display: none;
+    }
+
+    .main-content .all-project .project-item .name-project {
+        margin: 0;
     }
 }
 
 @media (max-width: 36rem) {
     .img-responsive {
-        min-height: r(130);
+        min-height: rem(130);
     }
 
     .main-content .all-project .project-item {
         border-bottom: 0.0625rem solid #e8e8e8;
+        margin: 1rem 0 0;
     }
 
     .main-content .all-project .project-item .text-project {
-        padding: r(10) 0;
+        padding: rem(10) 0;
     }
 
     .main-content .all-project {
@@ -75,7 +92,7 @@
     }
 
     #modal__inner {
-        margin: r(10);
+        margin: rem(10);
     }
 
     .main-content .all-project .project-item .img-project {
@@ -98,11 +115,11 @@
     }
 
     #modal__information p {
-        font-size: r(17);
+        font-size: rem(17);
     }
 
     #modal__information span {
-        font-size: r(14);
+        font-size: rem(14);
     }
 
     #modal__form form {
@@ -115,7 +132,7 @@
 
     #modal__form form textarea {
         width: 100%;
-        height: r(75);
+        height: rem(75);
     }
 
     #modal__form #btn-modal {
@@ -128,7 +145,7 @@
     }
 
     .paragraph {
-        font-size: r(15.7);
+        font-size: rem(15.7);
         line-height: 1.5;
     }
 
@@ -139,5 +156,9 @@
     }
 }
 
-@media (-ms-high-contrast: none),
-(-ms-high-contrast: active) {}
+@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    #modal__inner {
+        margin: rem(40);
+        margin-left: rem(20)
+    }
+}

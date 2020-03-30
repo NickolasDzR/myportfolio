@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    font-size: 16r(10);
+    font-size: 16px;
     margin: 0 auto;
     position: relative;
     line-height: 1.75;
@@ -56,11 +56,11 @@ img {
 .btn {
     color: white;
     text-transform: uppercase;
-    font-size: r(14);
+    font-size: rem(14);
     background-color: #9AA4A2;
     padding: rem(9) rem(25) rem(10);
     border: none;
-    border-radius: rem(15);
+    border-radius: 0.938rem;
     cursor: pointer;
     transition: all .3s linear;
 }
@@ -115,33 +115,33 @@ img {
     &__inner {
         background-color: rgba(255, 255, 255, 1);
         width: rem(500);
-        border-radius: r(10);
+        border-radius: 0.625rem;
         animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         z-index: 20;
     }
 
     &__information {
-        border-bottom: r(1) solid rgba(0, 0, 0, .2);
+        border-bottom: 0.063rem solid rgba(0, 0, 0, .2);
         background-color: rgba(0, 0, 0, .1);
         padding: rem(20) rem(20) rem(10);
 
         p {
-            font-size: r(20);
+            font-size: rem(20);
             font-weight: bold;
         }
 
         span {
-            font-size: 16r(10);
+            font-size: rem(16);
         }
     }
 
     &__close {
         position: absolute;
         top: 1.55rem;
-        right: r(20);
-        width: r(20);
-        height: r(20);
-        border-radius: r(15);
+        right: rem(20);
+        width: rem(20);
+        height: rem(20);
+        border-radius: 0.938rem;
         border: none;
         background-color: transparent;
         cursor: pointer;
@@ -149,12 +149,12 @@ img {
         &:before,
         &:after {
             content: '';
-            width: 15r(10);
-            height: 1r(10);
+            width: rem(15);
+            height: rem(1);
             background-color: #4c4747;
             display: inline-block;
             position: absolute;
-            left: 3r(10);
+            left: rem(3);
         }
 
         &:before {
@@ -178,8 +178,8 @@ img {
 
         input,
         textarea {
-            padding: r(5);
-            border-radius: r(4);
+            padding: rem(5);
+            border-radius: rem(4);
             box-shadow: none;
             border: 0.0625rem solid #aba8a8;
             outline: none;
@@ -313,9 +313,9 @@ img {
 @keyframes fadeInLeft {
     0% {
         opacity: 0;
-        -webkit-transform: translateX(r(-20));
-        -ms-transform: translateX(r(-20));
-        transform: translateX(r(-20));
+        -webkit-transform: translateX(rem(-20));
+        -ms-transform: translateX(rem(-20));
+        transform: translateX(rem(-20));
     }
 
     100% {
@@ -334,9 +334,9 @@ img {
 @keyframes fadeInDown {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(r(-20));
-        -ms-transform: translateY(r(-20));
-        transform: translateY(r(-20));
+        -webkit-transform: translateY(rem(-20));
+        -ms-transform: translateY(rem(-20));
+        transform: translateY(rem(-20));
     }
 
     100% {
@@ -355,9 +355,9 @@ img {
 @keyframes fadeInRight {
     0% {
         opacity: 0;
-        -webkit-transform: translateX(r(20));
-        -ms-transform: translateX(r(20));
-        transform: translateX(r(20));
+        -webkit-transform: translateX(rem(20));
+        -ms-transform: translateX(rem(20));
+        transform: translateX(rem(20));
     }
 
     100% {
@@ -383,7 +383,7 @@ img {
 
 .gha-user-info {
     margin: 0;
-    padding-left: r(5);
+    padding-left: rem(5);
 }
 
 .gha-gravatar {
@@ -401,13 +401,13 @@ img {
     font-size: inherit;
 
     &>svg {
-        width: r(40);
-        height: r(40);
+        width: rem(40);
+        height: rem(40);
     }
 }
 
 .modal__inner_blur {
-    filter: blur(r(5));
+    filter: blur(rem(5));
     animation: modalBlur .7s linear !important;
 }
 
@@ -417,7 +417,7 @@ img {
     }
 
     100% {
-        filter: blur(r(5))
+        filter: blur(rem(5))
     }
 }
 
@@ -432,9 +432,9 @@ img {
 @keyframes slideInDown {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(r(-2000));
-        -ms-transform: translateY(r(-2000));
-        transform: translateY(r(-2000));
+        -webkit-transform: translateY(rem(-2000));
+        -ms-transform: translateY(rem(-2000));
+        transform: translateY(rem(-2000));
     }
 
     100% {
@@ -453,9 +453,9 @@ img {
 @keyframes slideInUp {
     0% {
         opacity: 0;
-        -webkit-transform: translateY(r(-2000));
-        -ms-transform: translateY(r(-2000));
-        transform: translateY(r(-2000));
+        -webkit-transform: translateY(rem(-2000));
+        -ms-transform: translateY(rem(-2000));
+        transform: translateY(rem(-2000));
     }
 
     100% {
@@ -471,9 +471,9 @@ img {
 }
 
 .input-error-style input {
-    padding: r(4) !important;
-    border: r(2) solid rgba(237, 17, 46, 0.5);
-    box-shadow: 0 0 r(10) 0 rgba(237, 17, 46, 1);
+    padding: rem(4) !important;
+    border: 0.125rem solid rgba(237, 17, 46, 0.5);
+    box-shadow: 0 0 rem(10) 0 rgba(237, 17, 46, 1);
     animation: errorBoxShadow 1s ease infinite;
     position: relative;
 }
@@ -492,18 +492,18 @@ img {
     50%,
     70%,
     90% {
-        -webkit-transform: translateX(r(-10));
-        -ms-transform: translateX(r(-10));
-        transform: translateX(r(-10));
+        -webkit-transform: translateX(rem(-10));
+        -ms-transform: translateX(rem(-10));
+        transform: translateX(rem(-10));
     }
 
     20%,
     40%,
     60%,
     80% {
-        -webkit-transform: translateX(r(10));
-        -ms-transform: translateX(r(10));
-        transform: translateX(r(10));
+        -webkit-transform: translateX(rem(10));
+        -ms-transform: translateX(rem(10));
+        transform: translateX(rem(10));
     }
 }
 
@@ -514,18 +514,18 @@ img {
 
 @keyframes errorBoxShadow {
     0% {
-        border: r(2) solid rgba(237, 17, 46, 1);
+        border: 0.125rem solid rgba(237, 17, 46, 1);
     }
 
     50% {
-        border: r(2) solid rgba(237, 17, 46, 0.5);
+        border: 0.125rem solid rgba(237, 17, 46, 0.5);
     }
 
     100% {
-        border: r(2) solid rgba(237, 17, 46, 1);
+        border: 0.125rem solid rgba(237, 17, 46, 1);
     }
 }
 
 .img-shadow {
-    box-shadow: r(1) r(1) r(3) 0 #000000;
+    box-shadow: rem(1) rem(1) rem(3) 0 #000000;
 }

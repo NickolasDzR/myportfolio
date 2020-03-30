@@ -697,7 +697,7 @@ modalBtn.addEventListener('click', () => {
 	if (document.getElementById('modal') === null) {
 		const modalWindow = document.createElement('div');
 		modalWindow.id = 'modal';
-		modalWindow.innerHTML = '<div id="blur-modal"></div><div id="modal__inner"><div id="modal__information"><p>Отправьте мне сообщение</p><span>Хотя бы ваше имя и почту</span><button id="modal__close"></button></div><div id="modal__form"><form class="contact-form" action="POST"><label class="input-label" for="input-name" data-error="Забыли оставить имя"><input id="input-name" type="text" placeholder="Ваше Имя"></label><label class="input-label" for="input-email" data-error="Забыли оставить почту"><input id="input-email" type="text" placeholder="Ваш email"></label><label for="input-number"><input id="input-number" type="text" placeholder="Ваш номер"></label><textarea name="", rows="5", style="resize: none", placeholder="Текст"></textarea><button class="btn" id="btn-modal">Отправить</btn></form></div></div>';
+		modalWindow.innerHTML = '<div id="blur-modal"></div><div id="modal__inner"><div id="modal__information"><p>Отправьте мне сообщение</p><span>Хотя бы ваше имя и почту</span><button id="modal__close"></button></div><div id="modal__form"><form enctype="multipart/form-data" id="contact-form"><label class="input-label" for="input-name" data-error="Забыли оставить имя"><input id="input-name" name="input-name" type="text" placeholder="Ваше Имя"></label><label class="input-label" for="input-email" data-error="Забыли оставить почту"><input id="input-email" name="input-email" type="text" placeholder="Ваш email"></label><label for="input-number"><input id="input-number" name="input-number" type="text" placeholder="Ваш номер"></label><textarea name="input-text", rows="5", style="resize: none", placeholder="Текст"></textarea><button class="btn" id="btn-modal">Отправить</btn></form></div></div>';
 		document.body.appendChild(modalWindow);
 	}
 })
@@ -714,9 +714,18 @@ document.addEventListener('input', (e) => {
 	}
 })
 
+const phpRequest = () => {
+	const callBackForm = new FormData(document.querySelector('#contact-form'));
+	const request = new XMLHttpRequest();
+
+	request.open('post', 'mail.php');
+
+	request.send(callBackForm);
+};
+
+
 const regExEmail = new RegExp(/^[a-zA-Z\d\\.\-]+\@[a-zA-Z\d\\.\-]+\.[a-zA-Z]+$/);
 const regExName = new RegExp(/^[а-яА-Яa-zA-Z]+$/);
-
 
 document.addEventListener('click', (e) => {
 	const modal = document.getElementById('modal');
@@ -725,6 +734,7 @@ document.addEventListener('click', (e) => {
 		animationCloseModal(modal, modalInner);
 	}
 	if (e.target.id === "btn-modal") {
+		// e.preventDefault();
 		const inputName = document.getElementById('input-name');
 		const inputEmail = document.getElementById('input-email');
 		if (regExName.test(inputName.value) === false || regExEmail.test(inputEmail.value) === false) {
@@ -771,6 +781,7 @@ document.addEventListener('click', (e) => {
 		}
 		e.preventDefault();
 		openSwalModal(modal, modalInner);
+		phpRequest();
 	}
 });
 
@@ -797,13 +808,3 @@ new simpleParallax(jsLabel, {
 	scale: 1.5,
 	overflow: true,
 });
-
-
-const btnModal = document.querySelector('#btn-modal');
-
-document.addEventListener('click', function(e) {
-	console.log(e.target.id)
-	if (e.target.id === 'btn-modal') {
-		console.log('asdasdasd');
-	}
-})
